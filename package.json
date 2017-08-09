@@ -1,0 +1,30 @@
+{
+	"name": "testProjectname",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"iosbundle": "zhuan-react-native bundle --platform ios --dev false --entry-file index.ios.js --bundle-output ./output/testProjectname.ios.bundle",
+		"androidbundle": "zhuan-react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output ./output/testProjectname.android.bundle",
+		"androidsplitbundle": "npm run baseAndroidbundle && npm run businessAndroidbundle",
+		"iossplitbundle": "npm run baseIosbundle && npm run businessIosbundle",
+		"baseAndroidbundle": "zhuan-react-native bundle --platform android --entry-file ./base.android.js --bundle-output ./output/android/testProjectname.base.android.bundle --manifest-output ./output/android/base.android.manifest.json",
+		"businessAndroidbundle": "zhuan-react-native bundle --entry-file ./index.android.js --platform android --bundle-output ./output/android/testProjectname.hash.android.bundle --manifest-file ./output/android/base.android.manifest.json",
+		"baseIosbundle": "zhuan-react-native bundle --platform ios --entry-file ./base.ios.js --bundle-output ./output/ios/testProjectname.base.ios.bundle --manifest-output ./output/ios/base.ios.manifest.json",
+		"businessIosbundle": "zhuan-react-native bundle --entry-file ./index.ios.js --platform ios --bundle-output ./output/ios/testProjectname.hash.ios.bundle --manifest-file ./output/ios/base.ios.manifest.json",
+		"test": "jest"
+	},
+	"dependencies": {
+		"react": "16.0.0-alpha.6",
+		"react-native": "https://github.com/lishoulong/RNSourcecodeChange.git#0.44.0"
+	},
+	"devDependencies": {
+		"babel-jest": "20.0.3",
+		"babel-preset-react-native": "2.1.0",
+		"jest": "20.0.4",
+		"react-test-renderer": "16.0.0-alpha.6"
+	},
+	"jest": {
+		"preset": "react-native"
+	}
+}
