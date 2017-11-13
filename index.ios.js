@@ -51,3 +51,11 @@ const styles = StyleSheet.create({
 });
 
 AppRegistry.registerComponent('testProjectname', () => testProjectname);
+var app = document.createElement('div');
+document.body.appendChild(app);
+
+AppRegistry.runApplication('testProjectname', {
+  rootTag: app
+})
+
+module.exports = testProjectname;

@@ -17,7 +17,7 @@
 	},
 	"dependencies": {
 		"react": "16.0.0-alpha.6",
-		"react-web": "https://github.com/flyskywhy/react-web.git",
+		"react-web": "https://github.com/lishoulong/react-web.git",
 		"react-native": "https://github.com/lishoulong/RNSourcecodeChange.git#0.44.0"
 	},
 	"devDependencies": {
