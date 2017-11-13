@@ -12,17 +12,30 @@
 		"businessAndroidbundle": "zhuan-react-native bundle --entry-file ./index.android.js --platform android --bundle-output ./output/android/testProjectname.hash.android.bundle --manifest-file ./output/android/base.android.manifest.json",
 		"baseIosbundle": "zhuan-react-native bundle --platform ios --entry-file ./base.ios.js --bundle-output ./output/ios/testProjectname.base.ios.bundle --manifest-output ./output/ios/base.ios.manifest.json",
 		"businessIosbundle": "zhuan-react-native bundle --entry-file ./index.ios.js --platform ios --bundle-output ./output/ios/testProjectname.hash.ios.bundle --manifest-file ./output/ios/base.ios.manifest.json",
-		"test": "jest"
+		"test": "jest",
+		"web-dev": "node web/start-dev-server"
 	},
 	"dependencies": {
 		"react": "16.0.0-alpha.6",
+		"react-web": "https://github.com/flyskywhy/react-web.git",
 		"react-native": "https://github.com/lishoulong/RNSourcecodeChange.git#0.44.0"
 	},
 	"devDependencies": {
+    "babel-core": "6.16.0",
 		"babel-jest": "20.0.3",
-		"babel-preset-react-native": "2.1.0",
+    "babel-loader": "6.2.5",
+    "babel-polyfill": "6.16.0",
+    "babel-preset-stage-1": "6.16.0",
+    "babel-preset-react-native": "1.9.0",
+		"haste-resolver-webpack-plugin": "0.1.2",
+    "json-loader": "0.5.2",
 		"jest": "20.0.4",
-		"react-test-renderer": "16.0.0-alpha.6"
+		"react-dom": "16.0.0-alpha.6",
+		"react-hot-loader": "1.2.7",
+		"react-test-renderer": "16.0.0-alpha.6",
+    "webpack": "1.12.10",
+    "webpack-dev-server": "1.14.0",
+    "webpack-html-plugin": "0.1.1"
 	},
 	"jest": {
 		"preset": "react-native"
